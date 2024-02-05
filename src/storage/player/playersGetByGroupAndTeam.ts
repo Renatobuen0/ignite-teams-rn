@@ -1,13 +1,13 @@
-import { playersGetByGroup } from './playersGetByGroup';
+import { playersGetByGroup } from "./playersGetByGroup"
 
 export async function playersGetByGroupAndTeam(group: string, team: string) {
-  try {
-    const storage = await playersGetByGroup(group);
+	try {
+		const storage = await playersGetByGroup(group)
 
-    const players = storage.filter(player => player.team === team);
+		const players = storage.filter((player) => player.team === team)
 
-    return players;
-  } catch (error) {
-    throw error;
-  }
+		return players
+	} catch (error) {
+		throw error
+	}
 }
